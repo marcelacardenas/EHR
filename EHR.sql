@@ -1,7 +1,9 @@
 /************************ CODE STARTS HERE ***********************************************/
 use Hospital;
+
 -- DDL: 
 -- ddl/dimDate.sql
+
 DROP TABLE IF EXISTS dimDate;  
 CREATE TABLE dimDate(
   idDate bigint AUTO_INCREMENT,
@@ -133,9 +135,7 @@ idAge = CASE WHEN Age < 20 THEN Age ELSE 20 END; #wasnt able to put case stateme
 SELECT  Generation,
         SUM(totalconsults) as total,
         SUM(CASE WHEN gender ='F' THEN 1 ELSE 0 END) AS womenCount, 
-        SUM(CASE when gender ='M' THEN  1 else 0 END) AS menCount,
-        (SUM(CASE when gender ='M' THEN  1 else 0 END)/SUM(totalconsults))*100 as 'Men%',
-          (SUM(CASE when gender ='M' THEN  1 else 0 END) /SUM(totalconsults))*100 as 'Women%'
+        SUM(CASE when gender ='M' THEN  1 else 0 END) AS menCount
 FROM FactPatientMetrics f
 INNER JOIN DimPatient dp on f.idpatient = dp.idpatient
 GROUP BY Generation
