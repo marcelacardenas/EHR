@@ -1,6 +1,6 @@
 
 -- etl/LoadDimDate.sql
-LOAD DATA LOCAL INFILE '/Users/marcelacardenas/Desktop/consults.csv'
+LOAD DATA LOCAL INFILE '/Users/marcelacardenas/Documents/data/consults.csv'
 INTO TABLE DimDate
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
@@ -14,3 +14,5 @@ season = CASE
   WHEN (DATE_FORMAT(`consultDate`, '%m')) IN (9,10,11) THen 'Autum'
     Else season = season
     END ;
+    
+    

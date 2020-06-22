@@ -1,6 +1,6 @@
 
 -- etl/LoadDimPatient.sql
-LOAD DATA LOCAL INFILE '/Users/marcelacardenas/Desktop/patients.csv'
+LOAD DATA LOCAL INFILE '/Users/marcelacardenas/Documents/data/patients.csv'
 INTO TABLE dimPatient
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'

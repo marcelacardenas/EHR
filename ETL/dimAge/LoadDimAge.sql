@@ -1,6 +1,6 @@
 
 -- etl/LoadDimAge.sql
-LOAD DATA LOCAL INFILE '/Users/marcelacardenas/Desktop/Age.csv'
+LOAD DATA LOCAL INFILE '/Users/marcelacardenas/Documents/data/Age.csv'
 INTO TABLE dimAge
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'

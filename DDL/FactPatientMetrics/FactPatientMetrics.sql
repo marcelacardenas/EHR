@@ -1,6 +1,6 @@
 
 -- ddl/FactPatientMetrics.sql
-#CREATE Fact Table relation with Patient and Date dimensions primary keys
+-- CREATE Fact Table relation with Patient and Date dimensions primary keys
 DROP TABLE IF EXISTS FactPatientMetrics;
 CREATE TABLE FactPatientMetrics(
 idFact serial AUTO_INCREMENT,
